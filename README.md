@@ -1,6 +1,6 @@
 # 🌐 Página Dinámica con PHP
 
-Este es el código fuente de mi página web dinámica que utiliza PHP. Dado que GitHub Pages solo soporta contenido estático, esta página no puede ser visitada directamente desde GitHub Pages. Sin embargo, puedes ejecutarla localmente siguiendo las instrucciones a continuación.
+Este es el código fuente de mi página web dinámica que utiliza PHP. Dado que GitHub Pages solo soporta contenido estático, esta página no puede ser visitada directamente desde GitHub Pages. 
 
 ## 🌟 Tecnologías Utilizadas
 
@@ -9,82 +9,26 @@ Este es el código fuente de mi página web dinámica que utiliza PHP. Dado que 
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
-## 📋 Descripción
+## 📋 Descripción del Proyecto
 
-Este proyecto es una página web dinámica que utiliza PHP para generar contenido en tiempo real. Incluye funcionalidades interactivas y se puede ejecutar localmente en un servidor PHP.
+Este proyecto tiene como objetivo desarrollar un Producto Mínimo Viable (PMV) en PHP utilizando el patrón de diseño MVC (Modelo-Vista-Controlador). La aplicación está diseñada para acceder a un Sistema Gestor de Bases de Datos (SGBD) MySQL, ofreciendo las funcionalidades básicas de una plataforma de Video Bajo Demanda (VBD).
 
-## ✨ Características
+## 🏗️ Arquitectura del Proyecto
 
-- Generación dinámica de contenido utilizando PHP.
-- Interfaz amigable y fácil de usar.
-- Funcionalidades interactivas implementadas con JavaScript.
-- Acceso a datos con inserción en PHP, Java y JavaScript.
-  - Actualmente no está vinculada a la base de datos por lo que la inserción u obtención de datos no está disponible.
+El proyecto sigue la arquitectura MVC, que separa la lógica de la aplicación en tres componentes principales:
 
-<br>
-Actualmente no está vinculada a la base de datos por lo que la inserción u obtención de datos no está disponible.
+- **Modelo (Model)**: Maneja la lógica de negocio y la interacción con la base de datos. Aquí se define cómo los datos se almacenan, recuperan y manipulan.
+- **Vista (View)**: Se encarga de la presentación de la información al usuario. Aquí se define cómo se muestran los datos y cómo se estructuran las páginas HTML.
+- **Controlador (Controller)**: Gestiona la comunicación entre el modelo y la vista. Procesa las solicitudes del usuario, invoca métodos en el modelo y selecciona la vista adecuada para devolver la respuesta.
 
-## 📁 Estructura del Proyecto
+## 🎯 Funcionalidades Principales
 
-- `index.php`: Página principal de la aplicación.
-- `styles.css`: Archivo de estilos CSS.
-- `script.js`: Archivo JavaScript con la lógica interactiva.
-- `images/`: Carpeta que contiene imágenes utilizadas en la página.
+- **Panel de Administración**: Un panel central donde los administradores pueden añadir nuevos contenidos, como películas, documentales y series.
+- **Inserción de Contenidos**: Formularios para la inserción de nuevos registros en el catálogo, incluyendo títulos, descripciones, y otros detalles relevantes.
+- **Visualización del Catálogo**: Una interfaz que muestra todos los registros existentes en el catálogo de manera conjunta, permitiendo a los usuarios navegar por los distintos contenidos disponibles.
+- **Interacción con la Base de Datos**: Todas las operaciones de inserción, actualización y visualización están integradas con una base de datos MySQL, que almacena toda la información sobre los contenidos.
 
-## 🚀 Instalación
+## 📸 Imágenes del Proyecto 
 
-### Ejecutar Localmente
-
-Para ejecutar este proyecto localmente, sigue estos pasos:
-
-1. Clona este repositorio:
-    ```sh
-    git clone https://github.com/tu-usuario/pagina-php.git
-    ```
-2. Navega al directorio del proyecto:
-    ```sh
-    cd pagina-php
-    ```
-3. Asegúrate de tener un servidor PHP instalado. Puedes usar `php -S` para iniciar un servidor local:
-    ```sh
-    php -S localhost:8000
-    ```
-4. Abre tu navegador y navega a `http://localhost:8000/index.php`.
-
-### Publicar en GitHub Pages
-
-Dado que GitHub Pages no soporta PHP directamente, puedes usar GitHub Actions para generar archivos HTML estáticos a partir de tu contenido PHP. Aquí tienes un ejemplo de configuración para GitHub Actions:
-
-Crea un archivo `.github/workflows/main.yml` en tu repositorio con el siguiente contenido:
-
-```yaml
-name: Build and Deploy
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-
-      - name: Install dependencies
-        run: composer install
-
-      - name: Generate HTML files
-        run: php -S localhost:8000
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+<img src="https://github.com/user-attachments/assets/83f4fe99-e41d-4fe2-b59d-fa6510489671" width="600">
+<img src="https://github.com/user-attachments/assets/4c310aa0-2c87-450b-b2d7-5e8fe8f99bf8" width="600">
