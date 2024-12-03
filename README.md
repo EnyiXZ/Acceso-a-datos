@@ -18,6 +18,11 @@ Este proyecto es una página web dinámica que utiliza PHP para generar contenid
 - Generación dinámica de contenido utilizando PHP.
 - Interfaz amigable y fácil de usar.
 - Funcionalidades interactivas implementadas con JavaScript.
+- Acceso a datos con inserción en PHP, Java y JavaScript.
+  - Actualmente no está vinculada a la base de datos por lo que la inserción u obtención de datos no está disponible.
+
+<br>
+Actualmente no está vinculada a la base de datos por lo que la inserción u obtención de datos no está disponible.
 
 ## 📁 Estructura del Proyecto
 
